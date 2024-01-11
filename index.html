@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+  <!-- Poppins Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="navbar-title text-2xl font-bold text-white" href="#">Personal Website</a>
+        <div class="navbar-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero bg-cover bg-center text-white py-24 relative">
+    <div class="container mx-auto flex items-center">
+      <div class="w-1/2">
+        <h1 class="text-5xl font-bold mb-4 text-dark">Mangesh Pangam</h1>
+        <p class="text-lg mb-8 text-dark">Web Developer | Designer | Innovator</p>
+      </div>
+
+      <div class="w-1/2 flex justify-end">
+        <img src="images/profile.jpeg" alt="Your Name" class="rounded-lg shadow-xl" style="width: 450px; height: 450%;">
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="about-text">
+        Passionate and driven Web and Software Developer with skills in creating innovative solutions for web-based
+        applications. Committed to mastering the latest technologies and delivering high-quality results. Ready to excel
+        in the ever-evolving world of software development.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="bg-gray-100">
+    <div class="container">
+      <h2 class="text-3xl text-black font-bold mb-4">Projects</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="project-card">
+          <img src="images/project1.png" alt="Project 1" class="project-card-img">
+          <div class="project-card-body">
+            <h3 class="text-lg text-black font-bold mb-2">Events Euphoria - An Event Management Website</h3>
+            <p class="text-gray-700">Welcome to Event Euphoria, a cutting-edge event management website that transcends
+              traditional platforms by addressing language barriers and providing a comprehensive space for users, event
+              planners, and freelancers. This web application is designed to streamline event planning, booking, and
+              promotion while offering a unique language translator feature.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project2.jpg" alt="Project 2" class="project-card-img">
+          <div class="project-card-body">
+            <h3 class="text-lg text-black font-bold mb-2">Travelo - A Travel Agency Website</h3>
+            <p class="text-gray-700">Travelo is a web application designed to offer a user-friendly and convenient way
+              for travelers to explore destinations, find the best deals on flights, hotels, and tours, and easily plan
+              their dream vacations. The platform provides comprehensive information about various locations, including
+              tourist attractions, local culture, and travel tips.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/project3.png" alt="Project 3" class="project-card-img">
+          <div class="project-card-body">
+            <h3 class="text-lg text-black font-bold mb-2">Socio - A Social Networking Platform</h3>
+            <p class="text-gray-700">In todays world, having a large community for communication is much needed. but
+              there can arise many problems while doing so. some of which can be no proper platform to connect with
+              people which share the sme interest as you do. to avoid such problem we have made an application.
+              introducing you all to socio, a platform where you can reach to people easily and sharing contents becomes
+              ease.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+
+      <div class="contact-form">
+        <form id="contactForm" action="#" method="post" class="needs-validation" novalidate>
+
+          <div class="mb-4">
+            <input type="text" id="name" name="name" placeholder="Your Name" class="form-input" required>
+          </div>
+
+          <div class="mb-4">
+            <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required>
+          </div>
+
+          <div class="mb-4">
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" class="form-input form-textarea"
+              required></textarea>
+          </div>
+
+          <div class="mt-6">
+            <button type="button" id="submitBtn" class="form-btn">Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Personal Website. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', function () {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      if (name && email && message) {
+        window.location.href = 'thanks.html';
+      } else {
+        alert('Please fill in all required fields.');
+      }
+    });
+  </script>
+</body>
+
+</html>
